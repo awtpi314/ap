@@ -35,15 +35,18 @@ public class StringTester {
     }
 
     public String reversedString() {
-        char[] originalChars = original.toCharArray();
-        char[] reversedChars = new char[originalChars.length];
-        int length = originalChars.length;
+        char[] chars = original.toCharArray();
 
-        for (int i = 0, j = length - 1; i < length; i++, j--) {
-            reversedChars[i] = originalChars[j];
+        char tmp;
+        int loopCount = chars.length / 2;
+
+        for (int i = 0, j = chars.length - 1; i < loopCount; i++, j--) {
+            tmp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = tmp;
         }
 
-        return String.copyValueOf(reversedChars);
+        return String.copyValueOf(chars);
     }
 
     public int countSubstrings(String subString) {

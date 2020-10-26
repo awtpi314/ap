@@ -101,4 +101,32 @@ public class StringTesterTest {
             }
         }));
     }
+
+    @Test
+    public void testSpeedReverse() {
+        String original = "abcdefghijk";
+
+        System.out.println(Utils.timeit(() -> {
+            char[] originalChars = original.toCharArray();
+            char[] reversedChars = new char[originalChars.length];
+            int length = originalChars.length;
+
+            for (int i = 0, j = length - 1; i < length; i++, j--) {
+                reversedChars[i] = originalChars[j];
+            }
+        }));
+
+        System.out.println(Utils.timeit(() -> {
+            char[] chars = original.toCharArray();
+
+            char tmp;
+            int loopCount = chars.length / 2;
+
+            for (int i = 0, j = chars.length - 1; i < loopCount; i++, j--) {
+                tmp = chars[i];
+                chars[i] = chars[j];
+                chars[j] = tmp;
+            }
+        }));
+    }
 }
