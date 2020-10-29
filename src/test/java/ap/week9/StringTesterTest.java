@@ -36,7 +36,7 @@ public class StringTesterTest {
 
     @Test
     public void testSpeed() {
-        String original = "greeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandmgreeandn egandgs and haandm";
+        String original = "greeandn egandgs and haandm";
         String toReplace = "and";
 
         System.out.println(Utils.timeit(() -> {
@@ -92,7 +92,7 @@ public class StringTesterTest {
             int index = 0;
             int toReplaceLength = toReplace.length();
             while (true) {
-                index = sb.indexOf(toReplace, 0);
+                index = sb.indexOf(toReplace, index);
                 if (index != -1) {
                     sb.delete(index, index + toReplaceLength);
                 } else {
@@ -128,5 +128,15 @@ public class StringTesterTest {
                 chars[j] = tmp;
             }
         }));
+    }
+
+    @Test
+    public void test() {
+        String input = "tempus fugit";
+        int size = input.length();
+        String sub = "";
+
+        sub = input.substring(0, size + 1);
+        System.out.println(sub);
     }
 }

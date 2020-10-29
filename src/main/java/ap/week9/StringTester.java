@@ -61,18 +61,28 @@ public class StringTester {
     }
 
     public String removeAll(String searchString) {
-        if (searchString == null || searchString.isBlank())
-            return this.original;
-        return this.original.replaceAll(searchString, "");
+        StringBuilder sb = new StringBuilder(original);
+        int index = 0;
+        int toReplaceLength = searchString.length();
+        while (true) {
+            index = sb.indexOf(searchString, index);
+            if (index != -1) {
+                sb.delete(index, index + toReplaceLength);
+            } else {
+                break;
+            }
+        }
+
+        return sb.toString();
     }
 
     private String removeSpecialChars() {
         String result = "";
-        int halfString = result.length() / 2;
+        int length = result.length();
         char currentChar;
-        for (int i = 0; i < halfString; i++) {
+        for (int i = 0; i < length; i++) {
             currentChar = this.original.charAt(i);
-            if (!((currentChar > 0x40 && currentChar < 0x5B) || (currentChar > 0x60 && currentChar < 0x7B))) {
+            if (!((currentChar > '0' && currentChar < '9') || (currentChar > 'A' && currentChar < 'Z') || (currentChar > 'a' && currentChar < 'z'))) {
                 result += currentChar;
             }
         }
