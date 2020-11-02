@@ -38,7 +38,9 @@ public class SentenceTest {
 
     @Test
     public void testGetWords() {
-        
+        String str = "0";
+        str += str + 0 + 8;
+        System.out.println(str);
     }
 
     private boolean compare(int[] intArray, List<Integer> intList) {
