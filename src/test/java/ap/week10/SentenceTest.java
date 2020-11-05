@@ -3,9 +3,6 @@ package ap.week10;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
@@ -34,13 +31,6 @@ public class SentenceTest {
         sentence.setSetence("fourscore and twenty years ago our forefathers founded this country");
         int expectedPositionsC[] = { 9, 13, 20, 26, 30, 34, 46, 54, 59 };
         assertTrue(compare(expectedPositionsC, sentence.getBlankPositions()));
-    }
-
-    @Test
-    public void testGetWords() {
-        String str = "0";
-        str += str + 0 + 8;
-        System.out.println(str);
     }
 
     private boolean compare(int[] intArray, List<Integer> intList) {
