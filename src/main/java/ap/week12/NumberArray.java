@@ -1,7 +1,5 @@
 package ap.week12;
 
-import java.util.Arrays;
-
 /**
  * <p>
  * <b>File:</b> NumberArray.java

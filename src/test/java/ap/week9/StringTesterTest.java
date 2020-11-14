@@ -56,6 +56,8 @@ public class StringTesterTest {
                     result += original.charAt(i);
                 }
             }
+
+            System.out.println(result);
         }));
 
         System.out.println(Utils.timeit(() -> {
@@ -84,7 +86,7 @@ public class StringTesterTest {
             for (Character c : charResult) {
                 stringBuilder.append(c);
             }
-            String strResult = stringBuilder.toString();
+            stringBuilder.toString();
         }));
 
         System.out.println(Utils.timeit(() -> {
