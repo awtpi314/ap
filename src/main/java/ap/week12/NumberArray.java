@@ -3,8 +3,36 @@ package ap.week12;
 import java.util.Arrays;
 
 /**
- * <h3>NumberArray</h3>
- * <p>This class has some methods to manipulate arrays and find other numbers from the array</p>
+ * <p>
+ * <b>File:</b> NumberArray.java
+ * </p>
+ * 
+ * <p>
+ * <b>Description:</b> {@link NumberArray} is a class that contains many methods
+ * for dealing with arrays.
+ * </p>
+ * 
+ * <b>Method list:</b>
+ * <ul>
+ * <li>{@link #NumberArray(int)}</li>
+ * <li>{@link #findSum(int[])}</li>
+ * <li>{@link #findHighest(int[])}</li>
+ * <li>{@link #findLowest(int[])}</li>
+ * <li>{@link #findMode(int[])}</li>
+ * <li>{@link #findConsecutivePair(int[])}</li>
+ * <li>{@link #reversedArray(int[])}</li>
+ * <li>{@link #rotateArray(int[], int)}</li>
+ * <li>{@link #shuffle(int[])}</li>
+ * <li>{@link #findLargestConsecutive(int[])}</li>
+ * <li>{@link #merryGoRound(int[], int)}</li>
+ * <li>{@link #consolidate(int[])}</li>
+ * </ul>
+ * 
+ * <hr/>
+ * 
+ * @author Alexander Taylor (@awtpi314)
+ * @version 1.0
+ * @since 13 November 2020
  */
 public class NumberArray {
     private int[] randomArray;
@@ -165,7 +193,7 @@ public class NumberArray {
 
             int temp = inArray[i];
             inArray[i] = inArray[randomIndex];
-            inArray[randomIndex] = inArray[i];
+            inArray[randomIndex] = temp;
         }
     }
 
@@ -173,13 +201,13 @@ public class NumberArray {
      * Finds the largest consecutive items in the array
      * 
      * @param inArray the array in which to find consecutive items
-     * @return 
+     * @return the largest consecutive pattern
      */
     public int findLargestConsecutive(int[] inArray) {
         int largestConsecutive = inArray[0];
         int size = 1;
 
-        int currentConsecutive = inArray [1];
+        int currentConsecutive = inArray[1];
         int currentSize = 0;
 
         for (int i = 1; i < inArray.length; i++) {
@@ -192,16 +220,22 @@ public class NumberArray {
             if (currentSize > size) {
                 largestConsecutive = currentConsecutive;
             }
-        }   
+        }
 
         return largestConsecutive;
     }
 
     /**
-     * <p>Distributes the "candies" in inArray[currentIndex] over the following array indices.</p>
-     * <p><b>Note:</b> If there are more "candies" than positions in the array, it will wrap around and start at index 0</p>
+     * <p>
+     * Distributes the "candies" in inArray[currentIndex] over the following array
+     * indices.
+     * </p>
+     * <p>
+     * <b>Note:</b> If there are more "candies" than positions in the array, it will
+     * wrap around and start at index 0
+     * </p>
      * 
-     * @param inArray the array to distribute
+     * @param inArray      the array to distribute
      * @param currentIndex the index to pull "candies" from
      * @return the end index
      */
@@ -221,6 +255,23 @@ public class NumberArray {
         }
 
         return endIndex;
+    }
+
+    /**
+     * Moves all non-zeros to the beginning of the array
+     * 
+     * @param inArray the array to consolidate
+     */
+    public void consolidate(int[] inArray) {
+        int[] consolidated = new int[inArray.length];
+        int consolidatedIndex = 0;
+
+        for (int n : inArray) {
+            if (n != 0)
+                consolidated[consolidatedIndex++] = n;
+        }
+
+        inArray = consolidated;
     }
 
     /**
