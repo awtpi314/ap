@@ -137,7 +137,8 @@ public class NumberArray {
      * @return the first consecutive number
      */
     public int findConsecutivePair(int[] inArray) {
-        for (int i = 0; i < inArray.length; i++) {
+        int loopTimes = inArray.length - 1;
+        for (int i = 0; i < loopTimes; i++) {
             if (inArray[i] == inArray[i + 1]) {
                 return inArray[i];
             }
@@ -173,8 +174,8 @@ public class NumberArray {
     public int[] rotateArray(int[] inArray, int shift) {
         int[] outArray = new int[inArray.length];
 
-        for (int i = 0, j = 0 + shift; i < inArray.length; i++, j = normalizeSize(j++, inArray.length)) {
-            outArray[j] = inArray[j];
+        for (int i = 0, j = 0 + shift; i < inArray.length; i++, j = normalizeSize(++j, inArray.length)) {
+            outArray[j] = inArray[i];
         }
 
         return outArray;
@@ -220,6 +221,9 @@ public class NumberArray {
             }
         }
 
+        if (size == 1) {
+            return -1;
+        }
         return largestConsecutive;
     }
 
@@ -241,18 +245,11 @@ public class NumberArray {
         int numOfCandies = inArray[currentIndex];
         inArray[currentIndex] = 0;
 
-        int lastIndex = inArray.length - 1;
-        int endIndex = normalizeSize(currentIndex + numOfCandies, lastIndex);
-
-        for (int i = currentIndex + 1; i < inArray.length; i++) {
-            inArray[i]++;
+        for (int i = 0, j = currentIndex + 1; i < numOfCandies; i++, j = normalizeSize(++j, inArray.length)) {
+            inArray[j]++;
         }
 
-        for (int i = 0; i < endIndex; i++) {
-            inArray[i]++;
-        }
-
-        return endIndex;
+        return normalizeSize(numOfCandies + currentIndex, inArray.length);
     }
 
     /**
@@ -269,7 +266,9 @@ public class NumberArray {
                 consolidated[consolidatedIndex++] = n;
         }
 
-        inArray = consolidated;
+        for (int i = 0; i < inArray.length; i++) {
+            inArray[i] = consolidated[i];
+        }
     }
 
     /**
@@ -280,7 +279,7 @@ public class NumberArray {
      * @return the normalized index
      */
     private int normalizeSize(int position, int size) {
-        if (position > size) {
+        if (position >= size) {
             return position % size;
         } else {
             return position;
