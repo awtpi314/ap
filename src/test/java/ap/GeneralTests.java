@@ -1,5 +1,7 @@
 package ap;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class GeneralTests {
@@ -22,5 +24,20 @@ public class GeneralTests {
             result = Integer.parseInt(new StringBuilder(Integer.toString(num)).reverse().toString());
             System.out.println(result);
         }));
+    }
+
+    @Test
+    public void testEnhancedFor() {
+        int[][] data = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+        for (int[] dataLine : data) {
+            for (int i = 0; i < dataLine.length; i++) {
+                dataLine[i]++;
+            }
+        }
+
+        for (int[] dataLine : data) {
+            System.out.println(Arrays.toString(dataLine));
+        }
     }
 }
