@@ -10,20 +10,20 @@ public class NumberArrayTest {
     @Test
     public void testSpeed() {
         System.out.println(Utils.timeit(() -> {
-            int[] numbers = { 1, 5, 3, 76, 8, 345, 98, 24 };
+            int[] numbersA = { 1, 2, 3, 4, 5, 6, 7, 8 };
             var nA = new NumberArray(8);
-            nA.insertionSort(numbers);
+            nA.insertionSort(numbersA);
         }));
 
         System.out.println(Utils.timeit(() -> {
-            int[] numbers = { 1, 5, 3, 76, 8, 345, 98, 24 };
+            int[] numbersB = { 1, 2, 3, 4, 5, 6, 7, 8 };
             var nA = new NumberArray(8);
-            nA.mergeSort(numbers);
+            nA.sort(numbersB);
         }));
 
         System.out.println(Utils.timeit(() -> {
-            int[] numbers = { 1, 5, 3, 76, 8, 345, 98, 24 };
-            Arrays.sort(numbers);
+            int[] numbersC = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            Arrays.sort(numbersC);
         }));
     }
 

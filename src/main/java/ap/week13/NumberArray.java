@@ -294,19 +294,27 @@ public class NumberArray {
     }
 
     /**
-     * Same as merge sort but automatically calculates the left and right sides of the array.
+     * Mostly the same as {@link #mergeSort(int[], int, int)} but automatically
+     * calculates whether to use insertion or merge sort the left and right sides of
+     * the array.
+     * 
      * @param inArray the array to sort
      */
-    public void mergeSort(int[] inArray) {
-        mergeSort(inArray, 0, inArray.length - 1);
+    public void sort(int[] inArray) {
+        if (inArray.length < 64) {
+            insertionSort(inArray);
+        } else {
+            mergeSort(inArray, 0, inArray.length - 1);
+        }
     }
 
     /**
-     * Just for fun I implemented the merge sort algorithm.
-     * This is much faster than insertion sort
+     * Just for fun I implemented the merge sort algorithm. This is much faster than
+     * insertion sort
+     * 
      * @param inArray the array to sort
-     * @param left the position to start at
-     * @param right the position to end at
+     * @param left    the position to start at
+     * @param right   the position to end at
      */
     public void mergeSort(int[] inArray, int left, int right) {
         if (left < right) {
@@ -322,9 +330,9 @@ public class NumberArray {
     /**
      * This method merges the two arrays referenced by left, middle, and right.
      * 
-     * @param inArray the array to merge 
-     * @param left the left side of the array
-     * @param middle the middle of the two arrays
+     * @param inArray the array to merge
+     * @param left    the left side of the array
+     * @param middle  the middle of the two arrays
      * @param right
      */
     private void merge(int[] inArray, int left, int middle, int right) {
