@@ -197,6 +197,5 @@ public class DeckOfCards {
         System.out.println("Sorting...\n-------------------------------------------------");
         doC.sort();
         System.out.println(doC.toString());
-
     }
 }
