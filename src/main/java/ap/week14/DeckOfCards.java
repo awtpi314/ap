@@ -16,12 +16,20 @@ import ap.week14.Card.Suit;
  * Finally, the sort method will sort the deck based on suit and rank.
  * </p>
  * 
- * 
+ * @author awtpi314
+ * @since 4 December 2020
+ * @version 1.0.0
+ * @see {@link ap.week14.Card}
+ * @see {@link ap.week14.Card.Rank}
+ * @see {@link ap.week14.Card.Suit}
  */
 public class DeckOfCards {
     private final int MAX_SIZE = 52;
     private Card[] deck;
 
+    /**
+     * Constructs a deck of cards in order
+     */
     public DeckOfCards() {
         deck = new Card[MAX_SIZE];
         final String[] suits = { "Spades", "Hearts", "Diamonds", "Clubs" };
@@ -32,6 +40,9 @@ public class DeckOfCards {
         }
     }
 
+    /**
+     * Shuffles the deck using a three-pass shuffle to ensure better randomization.
+     */
     public void shuffle() {
         // Three-pass shuffle
         for (int i = 0; i < 3; i++) {
@@ -44,6 +55,12 @@ public class DeckOfCards {
         }
     }
 
+    /**
+     * Distributes cards to four hands and returns those hands in a 2D
+     * {@link ap.week14.Card Card} array.
+     * 
+     * @return the 2D array with the four hands
+     */
     public Card[][] distributeToFourHands() {
         final int HAND_SIZE = 13;
         Card[][] hands = new Card[4][HAND_SIZE];
@@ -57,6 +74,23 @@ public class DeckOfCards {
         return hands;
     }
 
+    /**
+     * Format a 2D {@link ap.week14.Card Card} array using hands format:
+     * 
+     * <pre>
+     *Hand 1:
+     *...
+     *...
+     *...
+     *Hand 2:
+     *...
+     *...
+     *...
+     * </pre>
+     * 
+     * @param hands the 2D array to format
+     * @return the formatted string
+     */
     public String handsToString(Card[][] hands) {
         StringBuilder sb = new StringBuilder();
         int handCounter = 1;
@@ -70,6 +104,9 @@ public class DeckOfCards {
         return sb.toString();
     }
 
+    /**
+     * Sorts the deck by suit and value
+     */
     public void sort() {
         sortBySuit();
         sortByValue();
@@ -84,6 +121,9 @@ public class DeckOfCards {
         return sb.toString();
     }
 
+    /**
+     * Insertion sort the deck by suit
+     */
     private void sortBySuit() {
         int n = MAX_SIZE;
 
@@ -100,6 +140,10 @@ public class DeckOfCards {
         }
     }
 
+    /**
+     * Divides the deck into four sections, which assumes that the deck is already
+     * sorted by suit
+     */
     private void sortByValue() {
         Card[] cardList = new Card[MAX_SIZE / 4];
 
@@ -114,6 +158,10 @@ public class DeckOfCards {
         }
     }
 
+    /**
+     * Sorts an array based on the value
+     * @param inArray the array to sort
+     */
     private void sortByValue(Card[] inArray) {
         for (int i = 1; i < inArray.length; i++) {
             Card key = inArray[i];
@@ -126,6 +174,15 @@ public class DeckOfCards {
 
             inArray[j + 1] = key;
         }
+    }
+
+    /**
+     * Get the deck of cards
+     * 
+     * @return the current deck of cards
+     */
+    public Card[] getDeck() {
+        return deck;
     }
 
     public static void main(String[] args) {
