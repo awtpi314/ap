@@ -52,4 +52,8 @@ public class BinaryNumber {
         }
         return this.binary;
     }
+
+    public String getHex() {
+        return hex;
+    }
 }

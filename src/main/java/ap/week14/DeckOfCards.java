@@ -16,7 +16,7 @@ import ap.week14.Card.Suit;
  * Finally, the sort method will sort the deck based on suit and rank.
  * </p>
  * 
- * @author awtpi314
+ * @author @awtpi314
  * @since 4 December 2020
  * @version 1.0.0
  * @see {@link ap.week14.Card}
@@ -183,19 +183,5 @@ public class DeckOfCards {
      */
     public Card[] getDeck() {
         return deck;
-    }
-
-    public static void main(String[] args) {
-        DeckOfCards doC = new DeckOfCards();
-        System.out.println(doC.toString());
-        System.out.println("Shuffling...\n-------------------------------------------------");
-        doC.shuffle();
-        System.out.println("Shuffled deck: ");
-        System.out.println(doC.toString());
-        System.out.println("Distributing to hands...\n-------------------------------------------------");
-        System.out.println(doC.handsToString(doC.distributeToFourHands()));
-        System.out.println("Sorting...\n-------------------------------------------------");
-        doC.sort();
-        System.out.println(doC.toString());
     }
 }

@@ -33,4 +33,11 @@ public class NumberArrayTest {
         var nA = new NumberArray(5);
         nA.insertionSort(numbers);
     }
+
+    @Test
+    public void testMode() {
+        int[] nums = { 1, 7, 5, 7, 10, 7, 7, 10, 10 };
+        var nA = new NumberArray(5);
+        System.out.println(nA.findMode(nums));
+    }
 }

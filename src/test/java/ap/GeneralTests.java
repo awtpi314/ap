@@ -40,4 +40,28 @@ public class GeneralTests {
             System.out.println(Arrays.toString(dataLine));
         }
     }
+
+    @Test
+    public void randomTest() {
+        String original = "bake and code";
+        String oldStr = "e";
+        String newStr = "ing";
+        String result = "";
+
+        final int oldStrLen = oldStr.length();
+        final int loopTimes = original.length() - oldStrLen + 1;
+
+        int i = 0;
+        do {
+            if (original.substring(i, i + oldStrLen).compareTo(oldStr) == 0) {
+                result += newStr;
+                i += oldStrLen;
+            } else {
+                result += original.charAt(i);
+                i++;
+            }
+        } while (i < loopTimes);
+
+        System.out.println(result);
+    }
 }

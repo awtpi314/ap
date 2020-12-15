@@ -71,14 +71,6 @@ public class NumberConvert {
 
     }
 
-    private char getHexDigit(int position) {
-        if (position < this.hexNum.length()) {
-            return this.hexNum.charAt(position);
-        } else {
-            return '\0';
-        }
-    }
-
     private void packUpAllZeros() {
         this.binNum = this.packUpZeros(this.binNum);
         this.hexNum = this.packUpZeros(this.hexNum);
