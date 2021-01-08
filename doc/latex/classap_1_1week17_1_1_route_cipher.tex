@@ -1,0 +1,90 @@
+\hypertarget{classap_1_1week17_1_1_route_cipher}{}\doxysection{ap.\+week17.\+Route\+Cipher Class Reference}
+\label{classap_1_1week17_1_1_route_cipher}\index{ap.week17.RouteCipher@{ap.week17.RouteCipher}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classap_1_1week17_1_1_route_cipher_a08a1c4f4b761dffb57bff8c4bffec02f}{Route\+Cipher}} (int nR, int nC)
+\item 
+String \mbox{\hyperlink{classap_1_1week17_1_1_route_cipher_a9890a374af5f3c2d228e1c825ae5bdde}{encrypt\+Message}} (String message, boolean debug)
+\item 
+String \mbox{\hyperlink{classap_1_1week17_1_1_route_cipher_a258263de15d9c20c80a5efc973b3399b}{decrypt\+Message}} (String s)
+\item 
+\mbox{\Hypertarget{classap_1_1week17_1_1_route_cipher_ab5a28aa1e122ac8b9cfcb2a5728969d5}\label{classap_1_1week17_1_1_route_cipher_ab5a28aa1e122ac8b9cfcb2a5728969d5}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyparagraph*{\mbox{\hyperlink{classap_1_1week17_1_1_route_cipher}{Route\+Cipher}}}
+
+\mbox{\hyperlink{classap_1_1week17_1_1_route_cipher}{Route\+Cipher}} is a class for encrypting string messages. The method of encryption used is the block cipher. The block size can be specified in the constructor. 
+
+\begin{DoxyAuthor}{Author}
+Alexander Taylor 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1/7/2020 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classap_1_1week17_1_1_route_cipher_a08a1c4f4b761dffb57bff8c4bffec02f}\label{classap_1_1week17_1_1_route_cipher_a08a1c4f4b761dffb57bff8c4bffec02f}} 
+\index{ap.week17.RouteCipher@{ap.week17.RouteCipher}!RouteCipher@{RouteCipher}}
+\index{RouteCipher@{RouteCipher}!ap.week17.RouteCipher@{ap.week17.RouteCipher}}
+\doxysubsubsection{\texorpdfstring{RouteCipher()}{RouteCipher()}}
+{\footnotesize\ttfamily ap.\+week17.\+Route\+Cipher.\+Route\+Cipher (\begin{DoxyParamCaption}\item[{int}]{nR,  }\item[{int}]{nC }\end{DoxyParamCaption})}
+
+The constructor for \mbox{\hyperlink{classap_1_1week17_1_1_route_cipher}{Route\+Cipher}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nR} & the number of rows to have in a block \\
+\hline
+{\em nC} & the number of columns to have in a block \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classap_1_1week17_1_1_route_cipher_a258263de15d9c20c80a5efc973b3399b}\label{classap_1_1week17_1_1_route_cipher_a258263de15d9c20c80a5efc973b3399b}} 
+\index{ap.week17.RouteCipher@{ap.week17.RouteCipher}!decryptMessage@{decryptMessage}}
+\index{decryptMessage@{decryptMessage}!ap.week17.RouteCipher@{ap.week17.RouteCipher}}
+\doxysubsubsection{\texorpdfstring{decryptMessage()}{decryptMessage()}}
+{\footnotesize\ttfamily String ap.\+week17.\+Route\+Cipher.\+decrypt\+Message (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})}
+
+decrypt\+Message takes the encrypted string {\bfseries{s}} and decrypts it according to the block cipher.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the encrypted string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the decrypted string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classap_1_1week17_1_1_route_cipher_a9890a374af5f3c2d228e1c825ae5bdde}\label{classap_1_1week17_1_1_route_cipher_a9890a374af5f3c2d228e1c825ae5bdde}} 
+\index{ap.week17.RouteCipher@{ap.week17.RouteCipher}!encryptMessage@{encryptMessage}}
+\index{encryptMessage@{encryptMessage}!ap.week17.RouteCipher@{ap.week17.RouteCipher}}
+\doxysubsubsection{\texorpdfstring{encryptMessage()}{encryptMessage()}}
+{\footnotesize\ttfamily String ap.\+week17.\+Route\+Cipher.\+encrypt\+Message (\begin{DoxyParamCaption}\item[{String}]{message,  }\item[{boolean}]{debug }\end{DoxyParamCaption})}
+
+encrypt\+Message takes the parameter message and transforms it according to the block cipher.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to encrypt \\
+\hline
+{\em debug} & print intermediate steps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the encrypted message 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/ap/week17/Route\+Cipher.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{classap_1_1week17_1_1_magic_square}{}\doxysection{ap.\+week17.\+Magic\+Square Class Reference}
+\label{classap_1_1week17_1_1_magic_square}\index{ap.week17.MagicSquare@{ap.week17.MagicSquare}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classap_1_1week17_1_1_magic_square_a1c41197bf1070012b8b75c0ccd0aa591}{Magic\+Square}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} m)  throws Exception 
+\item 
+boolean \mbox{\hyperlink{classap_1_1week17_1_1_magic_square_af8bd3470450b3ba27abc4d11875b0989}{is\+Magic\+Square}} ()
+\item 
+\mbox{\Hypertarget{classap_1_1week17_1_1_magic_square_a255e6b0cb2d540333e75ca39dce81ab6}\label{classap_1_1week17_1_1_magic_square_a255e6b0cb2d540333e75ca39dce81ab6}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyparagraph*{\mbox{\hyperlink{classap_1_1week17_1_1_magic_square}{Magic\+Square}}}
+
+This class is a representation of a potential magic square. The array passed to the \mbox{\hyperlink{}{ructor}} must be a square matrix, with the length and height being equal, non-\/zero numbers. If this condition is not satisfied, the constructor will throw an exception. 
+
+\begin{DoxyAuthor}{Author}
+Alexander Taylor 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+Version 0.\+0.\+1 -\/ January 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classap_1_1week17_1_1_magic_square_a1c41197bf1070012b8b75c0ccd0aa591}\label{classap_1_1week17_1_1_magic_square_a1c41197bf1070012b8b75c0ccd0aa591}} 
+\index{ap.week17.MagicSquare@{ap.week17.MagicSquare}!MagicSquare@{MagicSquare}}
+\index{MagicSquare@{MagicSquare}!ap.week17.MagicSquare@{ap.week17.MagicSquare}}
+\doxysubsubsection{\texorpdfstring{MagicSquare()}{MagicSquare()}}
+{\footnotesize\ttfamily ap.\+week17.\+Magic\+Square.\+Magic\+Square (\begin{DoxyParamCaption}\item[{int}]{m\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption}) throws Exception}
+
+This constructor checks to be sure that the 2D array passed is able to be placed into a magic square format for validation. 
+
+It then assigns the member constant \mbox{\hyperlink{}{S\+I\+ZE}} to the length of the array. Finally, it will copy the 2D array into \mbox{\hyperlink{}{matrix}} for validation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the matrix with which to create the square \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the array is null, not a square, or has zero length \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classap_1_1week17_1_1_magic_square_af8bd3470450b3ba27abc4d11875b0989}\label{classap_1_1week17_1_1_magic_square_af8bd3470450b3ba27abc4d11875b0989}} 
+\index{ap.week17.MagicSquare@{ap.week17.MagicSquare}!isMagicSquare@{isMagicSquare}}
+\index{isMagicSquare@{isMagicSquare}!ap.week17.MagicSquare@{ap.week17.MagicSquare}}
+\doxysubsubsection{\texorpdfstring{isMagicSquare()}{isMagicSquare()}}
+{\footnotesize\ttfamily boolean ap.\+week17.\+Magic\+Square.\+is\+Magic\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks to see whether the numbers contained in \mbox{\hyperlink{}{matrix}} form a magic square. This method uses \mbox{\hyperlink{}{row\+Sum}}, \mbox{\hyperlink{}{column\+Sum}}, \mbox{\hyperlink{}{major\+Diagonal\+Sum}}, and \mbox{\hyperlink{}{minor\+Diagonal\+Sum}} to validate the square.
+
+\begin{DoxyReturn}{Returns}
+whether the numbers in \mbox{\hyperlink{}{matrix}} form a magic square 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/ap/week17/Magic\+Square.\+java\end{DoxyCompactItemize}
