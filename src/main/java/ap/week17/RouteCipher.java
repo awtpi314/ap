@@ -157,7 +157,7 @@ public class RouteCipher {
         for (int i = 0; i < numBlocks; i++) {
             final int currentPos = i * blockSize;
             if (currentPos + blockSize + 1 < s.length()) {
-                fillBlockInColumnOrder(s.substring(currentPos, currentPos + blockSize + 1));
+                fillBlockInColumnOrder(s.substring(currentPos, currentPos + blockSize));
             } else {
                 fillBlockInColumnOrder(s.substring(currentPos));
             }
