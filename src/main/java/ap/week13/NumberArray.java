@@ -214,10 +214,12 @@ public class NumberArray {
                 currentSize++;
             } else {
                 currentConsecutive = inArray[i];
+                currentSize = 1;
             }
 
             if (currentSize > size) {
                 largestConsecutive = currentConsecutive;
+                size = currentSize;
             }
         }
 

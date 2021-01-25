@@ -1,6 +1,8 @@
 package ap;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -43,25 +45,16 @@ public class GeneralTests {
 
     @Test
     public void randomTest() {
-        String original = "bake and code";
-        String oldStr = "e";
-        String newStr = "ing";
-        String result = "";
+        List<Integer> list = new ArrayList<>();
 
-        final int oldStrLen = oldStr.length();
-        final int loopTimes = original.length() - oldStrLen + 1;
+        list.add(0);
+        list.add(1);
+        list.add(0, 2);
+        list.add(1, 3);
+        list.set(2, 4);
+        list.remove(3);
+        list.add(5);
 
-        int i = 0;
-        do {
-            if (original.substring(i, i + oldStrLen).compareTo(oldStr) == 0) {
-                result += newStr;
-                i += oldStrLen;
-            } else {
-                result += original.charAt(i);
-                i++;
-            }
-        } while (i < loopTimes);
-
-        System.out.println(result);
+        System.out.println(list);
     }
 }

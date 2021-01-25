@@ -40,4 +40,21 @@ public class NumberArrayTest {
         var nA = new NumberArray(5);
         System.out.println(nA.findMode(nums));
     }
+
+    @Test
+    public void testFindLongestConsecutive() {
+        int[] nums = new int[] { 3, 4, 5, 4, 3, 2, 34, 4, 5, 65, 6, 6, 6, 6, 6, 6, 5, 4, 3, 2, 2, 2, 2, 3, 4, 5, 2, 2,
+                2 };
+        var nA = new NumberArray(5);
+        System.out.println(Utils.timeit(() -> {
+            nA.findLargestConsecutive(nums);
+        }));
+    }
+
+    @Test
+    public void testRotatedArray() {
+        int[] nums = { 1, 7, 5, 7, 10, 7, 7, 10, 10 };
+        var nA = new NumberArray(5);
+        System.out.println(Arrays.toString(nA.rotateArray(nums, 3)));
+    }
 }
