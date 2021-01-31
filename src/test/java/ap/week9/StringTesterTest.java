@@ -131,14 +131,4 @@ public class StringTesterTest {
             }
         }));
     }
-
-    @Test
-    public void test() {
-        String input = "tempus fugit";
-        int size = input.length();
-        String sub = "";
-
-        sub = input.substring(0, size + 1);
-        System.out.println(sub);
-    }
 }
