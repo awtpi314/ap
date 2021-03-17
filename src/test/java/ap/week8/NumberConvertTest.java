@@ -3,8 +3,6 @@ package ap.week8;
 import org.junit.Before;
 import org.junit.Test;
 
-import ap.week8.Class.ZZZGuyNumber;
-
 public class NumberConvertTest {
     NumberConvert nc;
 

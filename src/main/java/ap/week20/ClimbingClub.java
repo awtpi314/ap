@@ -1,9 +1,7 @@
 package ap.week20;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * <h3>ClimbingClub</h3>
