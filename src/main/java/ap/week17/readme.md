@@ -2,9 +2,9 @@
 
 # Route Cipher
 
-<p>RouteCipher.java is an implementation of TPS AP Java Lesson 17. It encrypts a string using a block cipher algorithm.</p>
+<p>RouteCipher.java is an implementation of TPS AP Java Lesson 17. <br>It encrypts a string using a block cipher algorithm.</p>
 
-# UML
+### UML
 
 <style>
 td {
@@ -20,7 +20,7 @@ td {
 </tr>
 <tr><td>-letterBlock: String[][]</td></tr>
 <tr><td>-numRows: int</td></tr>
-<tr><td style="border-width:0px 2px 2px 2px;">-numColumns: int</td></tr>
+<tr><td>-numColumns: int</td></tr>
 <tr><td>+RouteCipher(int, int)</td></tr>
 <tr><td>-fillBlock(String)</td></tr>
 <tr><td>-encryptBlock(): String</td></tr>
@@ -28,7 +28,7 @@ td {
 <tr><td>-fillBlockInColumnOrder(String)</td></tr>
 <tr><td>-decryptBlock(): String</td></tr>
 <tr><td>+decryptMessage(String): String</td></tr>
-<tr><td style="border-width:0px 2px 2px 2px;">+toString(): String</td></tr>
+<tr><td style="border-width:2px 2px 2px 2px;">+toString(): String</td></tr>
 
 </table>
 
