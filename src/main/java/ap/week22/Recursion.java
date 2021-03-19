@@ -100,8 +100,8 @@ public class Recursion {
      * @param num int
      * @return int
      */
-    private static int sumUpDigits(long num) {
-        int sum = 0;
+    private static long sumUpDigits(long num) {
+        long sum = 0;
 
         // while loop to calculate the sum of digits
         while (num > 0) {
