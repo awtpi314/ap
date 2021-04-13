@@ -11,6 +11,6 @@ public class CalendarTest {
     public void test() {
         // System.out.println(APCalendar.firstDayOfYear(2033));
         // System.out.println(APCalendar.dayOfYear(1, 1, 2033));
-        System.out.println(APCalendar.dayOfWeekToString(7, 30, 2537));
+        System.out.println(Calendar.dayOfWeekToString(7, 30, 2537));
     }
 }

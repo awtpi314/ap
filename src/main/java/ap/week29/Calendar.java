@@ -9,7 +9,7 @@ package ap.week29;
  * @since 12 April 2021
  * @version 1.0
  */
-public class APCalendar {
+public class Calendar {
     /**
      * The first day of 1800 was a Wednesday
      */
