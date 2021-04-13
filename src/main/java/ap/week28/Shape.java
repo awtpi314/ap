@@ -3,7 +3,7 @@ package ap.week28;
 /**
  * <h3>Shape</h3>
  * 
- * This clas implements a shape with a name and nothing else. The abstract
+ * This class implements a shape with a name and nothing else. The abstract
  * methods {@link #getArea() getArea}, {@link #getPerimeter() getPerimeter},
  * {@link #getVolume() getVolume} are to be implemented by subclasses with the
  * correct calculations.
