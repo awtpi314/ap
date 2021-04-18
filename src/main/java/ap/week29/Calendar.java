@@ -1,9 +1,9 @@
 package ap.week29;
 
 /**
- * <h3>APCalendar</h3>
+ * <h3>Calendar</h3>
  * 
- * APCalendar calculates the day of the week given a date
+ * Calendar calculates the day of the week given a date
  * 
  * @author Alexander Taylor
  * @since 12 April 2021
